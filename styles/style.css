@@ -1,0 +1,70 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:#f0efeb ;
+}
+
+.icons_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.icons_container .icon {
+position: relative;
+border-radius: 50%;
+padding: 15px;
+margin: 10px;
+font-size: 18px;
+cursor: pointer
+}
+
+
+.icons_container .icon::before,
+.icons_container .icon::after {
+content: '';
+position: absolute;
+box-sizing: border-box;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+transition: 0.1s linear;
+}
+
+
+/* .icons_container .icon::before {
+border-radius: 50%;
+border-left: 4px solid;
+border-right: 4px solid;
+transform: skewX(20deg);
+color: #ff595e;
+}
+
+.icons_container .icon::after {
+border-radius: 50%;
+border-top: 4px solid;
+border-bottom: 4px solid;
+transform: skewY(-20deg);
+color: #ff595e;
+} */
+
+.icons_container .icon:hover::before {
+border-radius: 80%;
+border-left: 4px solid;
+border-right: 4px solid;
+transform: skewX(20deg);
+color: #ff595e;
+}
+.icons_container .icon:hover::after {
+border-radius: 80%;
+border-top: 4px solid;
+border-bottom: 4px solid;
+transform: skewY(-20deg);
+color:#ff595e;
+}
